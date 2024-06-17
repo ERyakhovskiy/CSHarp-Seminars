@@ -43,5 +43,5 @@ bin/
 *.cache
 *.json
 **.csproj
-
- 
+*.csproj
+ .sln
