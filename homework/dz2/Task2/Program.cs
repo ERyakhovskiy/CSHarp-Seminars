@@ -2,8 +2,11 @@
 // Напишите программу, которая принимает на вход координаты точки(X и Y), причем X неравно 0, Y неравно 0, 
 // и выдает номер координатной четверти плоскости, в которой находится эта точка.
 
-int x = -1;
-int y = -2;
+Console.Write("Input coordinates x: ");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input coordinates y: ");
+int y = Convert.ToInt32(Console.ReadLine());
+
 if (x > 0 && y > 0)
 {
     Console.WriteLine ("I Четверть");
