@@ -3,20 +3,20 @@
 //методы-функции
 
 
-// int Pow (int n)
-// {
-//     return n * n;
-// }
+int Pow (int n)
+{
+    return n * n;
+}
 
-// void Pow2(int n)
-// {
-//     System.Console.WriteLine($"Quad of {n} -> {n * n}");
-// }
+void Pow2(int n)
+{
+    System.Console.WriteLine($"Quad of {n} -> {n * n}");
+}
 
-// System.Console.WriteLine("input number: " );
-// int a = Convert.ToInt32(Console.ReadLine());
-// int result = Pow(a);
-// System.Console.WriteLine(result);
+System.Console.WriteLine("input number: " );
+int a = Convert.ToInt32(Console.ReadLine());
+int result = Pow(a);
+System.Console.WriteLine(result);
 
 
 // Задание 1
@@ -30,34 +30,34 @@
 
 // // Решаем
 
-// bool IsThreeDigit(int num)
-// {
-//     if (num > 99 && num < 1000)
-//     {
-//         return true;
-//     }
-//     return false;
-// }
+bool IsThreeDigit(int num)
+{
+    if (num > 99 && num < 1000)
+    {
+        return true;
+    }
+    return false;
+}
 
-// void DeleteSecondDigit(int num)
-// {
-//     if(IsThreeDigit(num))//456
-//     {
-//         int ed = num % 10;
-//         int sot = num / 100;
-//         System.Console.WriteLine(ed + sot * 10);
-//     }
-//     else
-//     {
-//         System.Console.WriteLine("You input not three-digit number");
-//     }
-// }
+void DeleteSecondDigit(int num)
+{
+    if(IsThreeDigit(num))//456
+    {
+        int ed = num % 10;
+        int sot = num / 100;
+        System.Console.WriteLine(ed + sot * 10);
+    }
+    else
+    {
+        System.Console.WriteLine("You input not three-digit number");
+    }
+}
 
 
 
-// // System.Console.WriteLine("Input number: " );
-// // int a = Convert.ToInt32(Console.ReadLine());
-// // DeleteSecondDigit(a);
+System.Console.WriteLine("Input number: " );
+int a = Convert.ToInt32(Console.ReadLine());
+DeleteSecondDigit(a);
 
 
 // //Задание 2
@@ -73,32 +73,32 @@
 
 // Решение
 
-// bool IsThreeDigit(int num)
-// {
-//     if (num > 99 && num < 1000)
-//     {
-//         return true;
-//     }
-//     return false;
-// }
+bool IsThreeDigit(int num)
+{
+    if (num > 99 && num < 1000)
+    {
+        return true;
+    }
+    return false;
+}
 
-// void SecondToThirdPower(int num)
-// {
-//     if(IsThreeDigit(num))//456
-//     {
-//         int ed = num % 10;
-//         int dec = num / 10 % 10;
-//         System.Console.WriteLine(Math.Pow(dec, ed));
-//     }
-//     else
-//     {
-//         System.Console.WriteLine("You input not three-digit number");
-//     }
-// }
+void SecondToThirdPower(int num)
+{
+    if(IsThreeDigit(num))//456
+    {
+        int ed = num % 10;
+        int dec = num / 10 % 10;
+        System.Console.WriteLine(Math.Pow(dec, ed));
+    }
+    else
+    {
+        System.Console.WriteLine("You input not three-digit number");
+    }
+}
 
-// System.Console.WriteLine("Input number: " );
-// int a = Convert.ToInt32(Console.ReadLine());
-// SecondToThirdPower(a);
+System.Console.WriteLine("Input number: " );
+int a = Convert.ToInt32(Console.ReadLine());
+SecondToThirdPower(a);
 
 // Задача 3
 

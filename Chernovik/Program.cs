@@ -87,31 +87,36 @@
 
 //Задание №3
 
-bool Multiplicity(int x,int y)
+// bool Multiplicity(int x,int y)
 
-{
-    if(x % y ==0)
-    {
-        return true;
-    }
-    return false;
-}
+// {
+//     if(x % y ==0)
+//     {
+//         return true;
+//     }
+//     return false;
+// }
 
-void Result(int x, int y)
-{
-    if (Multiplicity(x,y))
-    {
-        Console.WriteLine("да");
-    }
-    else
-    {
-        Console.WriteLine($"нет,{x % y}");
-    }
-}
+// void Result(int x, int y)
+// {
+//     if (Multiplicity(x,y))
+//     {
+//         Console.WriteLine("да");
+//     }
+//     else
+//     {
+//         Console.WriteLine($"нет,{x % y}");
+//     }
+// }
 
 
-Console.WriteLine("Input first number: ");
-int x = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input second number: ");
-int y = Convert.ToInt32(Console.ReadLine());
-Result(x,y);
+// Console.WriteLine("Input first number: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input second number: ");
+// int y = Convert.ToInt32(Console.ReadLine());
+// Result(x,y);
+
+
+
+//
+

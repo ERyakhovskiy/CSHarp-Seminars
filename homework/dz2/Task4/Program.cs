@@ -21,7 +21,7 @@ else
         }
         else
         {
-            Console.WriteLine(currentDigit);
+            Console.Write(currentDigit);
         }
     }
 }
