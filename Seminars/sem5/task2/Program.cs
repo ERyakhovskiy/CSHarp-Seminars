@@ -11,7 +11,21 @@
 // Решение
 
 
-
+int SomOfMainDiagonal(int[,] matrix )
+{
+    int sum = 0;
+    for(int i = 0; i < matrix.GetLength(0); i++)// прохождение по столбцу(сверху вниз)
+    {
+        for(int j = 0; j < matrix.GetLength(1); j++) // прохождение по строке(слева на право)
+        {
+           if(i == j) 
+           {
+                sum += matrix[i, j];
+           }
+        }
+    }
+    return sum;
+}
 
 
 int[,] CreateRandomMatrix(int rows, int columns, int min, int max)
@@ -40,3 +54,18 @@ void PrintMatrix(int[,] matrix)
     }
     Console.WriteLine();
 }
+
+
+System.Console.WriteLine("Input number of rows: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Input number of columns: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Input min of matrix: ");
+int min = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Input max of matrix: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int[,] matrix = CreateRandomMatrix(rows, columns, min, max); // матрицу созданную функцией CreateMatrix запишем в переменную int[,] matrix
+PrintMatrix(matrix); // выводит созданную матрицу
+
+System.Console.WriteLine(SomOfMainDiagonal(matrix));
