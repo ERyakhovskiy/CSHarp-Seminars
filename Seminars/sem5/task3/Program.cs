@@ -1,30 +1,37 @@
-﻿// Задача № 2
+﻿// Задание № 3
 
-// Задайте двухмерный массив. Найдите сумму эл-в,
-// находящихся на главной диогонали (с индексами (0, 0); (1,1))
-// и т.д.
+// Задайте двумерный массив их целых чисел. Сформируйте новый
+// одномерный массив, состоящий из средних арифметических
+// значений по строкам двумерного массива.
 // Пример
 // 2 3 4 3
-// 4 3 4 1 = > 2 + 3 + 5 = 10
-// 1 9 5 4
+// 4 3 4 1 => [3 3 5]
+// 2 9 5 4
 
 // Решение
 
-
-int SomOfMainDiagonal(int[,] matrix )
+double[] SrAr(int [,] matrix)
 {
-    int sum = 0;
+    double[] result = new double[matrix.GetLength(0)]; // Размер создоваемого массива совподает с кол-м строк
     for(int i = 0; i < matrix.GetLength(0); i++)// прохождение по столбцу(сверху вниз)
     {
+        int sum = 0; // обнуляет сумму после прохождения строки
         for(int j = 0; j < matrix.GetLength(1); j++) // прохождение по строке(слева на право)
         {
-           if(i == j) // выставили условия, что оба индекса равны([0,0][1,1][2,2] и.т.д.)
-           {
-                sum += matrix[i, j]; // сложили сумму всех диогональных эл-ов
-           }
+            sum += matrix[i, j]; // складываем все эл-ты строки
         }
+        result[i] = (double)sum / matrix.GetLength(1); // обащаемся к новому массиву result по индексу [i] и записывае значение sum / кол-во эл-в в строке 
     }
-    return sum;
+    return result;
+}
+
+void PrintArray(double[] array)
+{
+    for(int i = 0; i < array.Length; i++)// прохождение по столбцу(сверху вниз)
+    {
+        System.Console.WriteLine(array[i] + " " );
+    }
+    Console.WriteLine("");
 }
 
 
@@ -41,6 +48,9 @@ int[,] CreateRandomMatrix(int rows, int columns, int min, int max)
     }
     return matrix;
 }
+
+
+
 
 void PrintMatrix(int[,] matrix)
 {
@@ -67,5 +77,4 @@ int max = Convert.ToInt32(Console.ReadLine());
 
 int[,] matrix = CreateRandomMatrix(rows, columns, min, max); // матрицу созданную функцией CreateMatrix запишем в переменную int[,] matrix
 PrintMatrix(matrix); // выводит созданную матрицу
-
-System.Console.WriteLine(SomOfMainDiagonal(matrix));
+PrintArray(SrAr(matrix));// выводим одномерный массив со среднеарифмитческими эл-ми
