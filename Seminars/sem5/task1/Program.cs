@@ -61,9 +61,9 @@ System.Console.WriteLine("Input number of rows: ");
 int rows = Convert.ToInt32(Console.ReadLine());
 System.Console.WriteLine("Input number of columns: ");
 int columns = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Input min of array: ");
+System.Console.WriteLine("Input min of matrix: ");
 int min = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Input max of array: ");
+System.Console.WriteLine("Input max of matrix: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
 
