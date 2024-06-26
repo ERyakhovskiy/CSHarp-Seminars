@@ -116,7 +116,7 @@ int[] ChengeArray(int[] array)
     }
     return mirrorArray; 
 }
-System.Console.WriteLine("Input size of rray: ");
+System.Console.WriteLine("Input size of array: ");
 int size = Convert.ToInt32(Console.ReadLine());
 
 int[] myArray = CreateRandomArray(size);
