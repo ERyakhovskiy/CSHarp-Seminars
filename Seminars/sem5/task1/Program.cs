@@ -50,7 +50,7 @@ void PrintMatrix(int[,] matrix)
     {
         for(int j = 0; j < matrix.GetLength(1); j++) // прохождение по строке(слева на право)
         {
-            Console.Write(matrix[i, j] + " ", ConsoleColor.Green);// вывод строки в консоль
+            Console.Write(matrix[i, j] + " ");// вывод строки в консоль
         }
         Console.WriteLine();
     }

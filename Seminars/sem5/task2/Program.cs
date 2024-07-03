@@ -11,7 +11,7 @@
 // Решение
 
 
-int SomOfMainDiagonal(int[,] matrix )
+int SumOfMainDiagonal(int[,] matrix )
 {
     int sum = 0;
     for(int i = 0; i < matrix.GetLength(0); i++)// прохождение по столбцу(сверху вниз)
@@ -68,4 +68,4 @@ int max = Convert.ToInt32(Console.ReadLine());
 int[,] matrix = CreateRandomMatrix(rows, columns, min, max); // матрицу созданную функцией CreateMatrix запишем в переменную int[,] matrix
 PrintMatrix(matrix); // выводит созданную матрицу
 
-System.Console.WriteLine(SomOfMainDiagonal(matrix));
+System.Console.WriteLine(SumOfMainDiagonal(matrix));

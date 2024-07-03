@@ -20,7 +20,7 @@ double[] SrAr(int [,] matrix)
         {
             sum += matrix[i, j]; // складываем все эл-ты строки
         }
-        result[i] = (double)sum / matrix.GetLength(1); // обащаемся к новому массиву result по индексу [i] и записывае значение sum / кол-во эл-в в строке 
+        result[i] = (double)sum / matrix.GetLength(1); // обращаемся к новому массиву result по индексу [i] и записывае значение sum / кол-во эл-в в строке 
     }
     return result;
 }

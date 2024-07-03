@@ -112,7 +112,7 @@ int[] ChengeArray(int[] array)
     {
         mirrorArray[i] = array[array.Length - i - 1];
 
-        i = i + 1;
+    
     }
     return mirrorArray; 
 }
