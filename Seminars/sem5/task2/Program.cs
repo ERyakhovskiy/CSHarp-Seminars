@@ -11,16 +11,16 @@
 // Решение
 
 
-int SumOfMainDiagonal(int[,] matrix )
+int SumOfMainDiagonal(int[,] matrix ) // методу SumOfMainDiagonal передали массив matrix
 {
-    int sum = 0;
+    int sum = 0; // объявили переменную sum
     for(int i = 0; i < matrix.GetLength(0); i++)// прохождение по столбцу(сверху вниз)
     {
         for(int j = 0; j < matrix.GetLength(1); j++) // прохождение по строке(слева на право)
         {
-           if(i == j) // выставили условия, что оба индекса равны([0,0][1,1][2,2] и.т.д.)
+           if(i == j) // выставили условие, что оба индекса равны([0,0][1,1][2,2] и.т.д.)
            {
-                sum += matrix[i, j]; // сложили сумму всех диогональных эл-ов
+                sum += matrix[i, j]; // к переменой sum прибавили значение элемнта с индексами i=j
            }
         }
     }
@@ -68,4 +68,4 @@ int max = Convert.ToInt32(Console.ReadLine());
 int[,] matrix = CreateRandomMatrix(rows, columns, min, max); // матрицу созданную функцией CreateMatrix запишем в переменную int[,] matrix
 PrintMatrix(matrix); // выводит созданную матрицу
 
-System.Console.WriteLine(SumOfMainDiagonal(matrix));
+System.Console.WriteLine(SumOfMainDiagonal(matrix)); // выведем на экран то что вернет метод SumOfMainDiagonal(сумму диогонали)

@@ -12,7 +12,7 @@
 
 // Решение:
 
-int[,] EvenNumsToQuad(int[,] matrix)
+int[,] EvenNumsToQuad(int[,] matrix) // Метод EvenNumsToQuad принемает массив matrix
 {
     for(int i = 0; i < matrix.GetLength(0); i++)// прохождение по столбцу(сверху вниз)
     {
@@ -54,7 +54,7 @@ void PrintMatrix(int[,] matrix)
         }
         Console.WriteLine();
     }
-    Console.WriteLine();
+    Console.WriteLine();// добавили метод чтобы между двумя выводами был пробел
 }
 
 System.Console.WriteLine("Input number of rows: ");
@@ -71,4 +71,4 @@ int[,] matrix = CreateRandomMatrix(rows, columns, min, max); // матрицу �
 PrintMatrix(matrix); // выводит созданную матрицу
 
 matrix = EvenNumsToQuad(matrix); // перезапишем созданную матрицу измененной(Эл-ты которой возвели в квадрат)
-PrintMatrix(matrix);
+PrintMatrix(matrix); // Выведем измененную матрицу

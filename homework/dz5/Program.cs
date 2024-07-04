@@ -3,28 +3,28 @@
 //Тело класса будет написано студентом. Класс обязан иметь статический метод PrintResult()
 class UserInputToCompileForTest
 { 
-// Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
-// и возвращает значение этого элемента или же указание, что такого элемента нет.
+// Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
 
 // Поиск элемента по позициям
     public static int FindElementByPosition(int[,] array, int x, int y)
     {
-        //Напишите свое  решение здесь
-        int [,] numbers =[0,0];
-        for(int i = 0; i < array.GetLength(0); i++)
+        //Напишите свое решение здесь
+      
+      for(int i = 0; i < array.GetLength(0); i++)
+      {
+        
+        for(int j = 0; j < array.GetLength(1); j++) 
         {
-        
-            for(int j = 0; j < array.GetLength(1); j++) 
+            if(x == i && y == j)
             {
-                if(i == x && j == y)
-                {
-                    numbers = array[i,j];
-                }
-           
-             }
-        
+                array = array[x,j];
+                
+            }
         }
-        return numbers;
+        
+      }
+      return array;
+  
     }
 
 // Проверка позиций на вхождение в массив
@@ -32,7 +32,7 @@ class UserInputToCompileForTest
     {
         //Напишите свое решение здесь
       
-      if(x < array.GetLength(0) && y < array.GetLength(1))
+      if(x <= array.GetLength(0) && y <= array.GetLength(1))
       {
         return true;
       }
@@ -42,16 +42,22 @@ class UserInputToCompileForTest
     public static void PrintResult(int[,] numbers, int x, int y)
     {
         //Напишите свое решение здесь
-      for (int i = 0; i < numbers.GetLength(0); i++)
+       
+      if(ValidatePosition(numbers, x ,y))
       {
-        for (int j = 0; j < numbers.GetLength(1); j++)
-        {
-          
-            Console.Write($"{numbers[i, j]} ");
-        }
-        Console.WriteLine(); // Перенос на новую строку после вывод предыдущей
+         Console.WriteLine (numbers[i,j]);
       }
-      Console.WriteLine();
+      if(x > numbers.GetLenth(0))
+      {
+          Console.WriteLine ("Позиция по рядам выходит за пределы массива");
+      }
+      if(x > numbers.GetLenth(1))
+      {
+          Console.WriteLine ("Позиция по колонкам выходит за пределы массива");
+      }
+        
+        
+      
     }
 }
 
