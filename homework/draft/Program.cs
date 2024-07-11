@@ -145,9 +145,42 @@
 // Программа завершается при вводе символа ‘q’ или при вводе числа, 
 // сумма цифр которого чётная.
 
-// РЕШЕНИЕ
+// РЕШЕНИЕ от преподователя
+
+bool IsTrue(string value)
+{
+    if(value == "q" ) return false;
+    int num = Convert.ToInt32(value);
+    int sum = 0;
+    while(num > 0)
+    {
+        sum += num % 10;
+        num /=10;
+    }
+    if(sum % 2 == 0)
+    {
+        return false;
+    } 
+    return true;
+}
+
+bool work = true;
+while(work) // цикл проверяет является ли work = true
+{
+    string value = Console.ReadLine();
+    if(IsTrue(value))
+    {
+        System.Console.WriteLine("!!!");
+    }
+    else
+    {
+        System.Console.WriteLine("???");
+        work = false;
+    }
+}
 
 
+// мои попытки
 
 // System.Console.WriteLine("Input integer number: ");
 // int num = Convert.ToInt32(Console.ReadLine());
@@ -225,51 +258,51 @@
 //  (первый элемент станет последним, второй – предпоследним и т.д.)
 
 
-int[] CreateRandomArray(int size)
+// int[] CreateRandomArray(int size)
 
-{
-    int[] array = new int [size];
-    Random random = new Random();
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = random.Next(0, 9 + 1);
-    }
-    return array;
-}
+// {
+//     int[] array = new int [size];
+//     Random random = new Random();
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = random.Next(0, 9 + 1);
+//     }
+//     return array;
+// }
 
-void PrintArray(int[] array)
-{
-    for(int i = 0; i < array.Length; i++)
-    {
-        System.Console.Write(array[i] + " ");
-    }
-    System.Console.WriteLine();
-}
+// void PrintArray(int[] array)
+// {
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         System.Console.Write(array[i] + " ");
+//     }
+//     System.Console.WriteLine();
+// }
 
-int[] ChengeArray(int[] array)
-{
-    int[] mirrorArray = new int[array.Length];
-    for (int i = 0; i < mirrorArray.Length; i++)
-    {
-        mirrorArray[i] = array[array.Length - i - 1];
+// int[] ChengeArray(int[] array)
+// {
+//     int[] mirrorArray = new int[array.Length];
+//     for (int i = 0; i < mirrorArray.Length; i++)
+//     {
+//         mirrorArray[i] = array[array.Length - i - 1];
 
-        i = i + 1;
-    }
-    return mirrorArray; 
-}
-System.Console.WriteLine("Input size of rray: ");
-int size = Convert.ToInt32(Console.ReadLine());
+//         i = i + 1;
+//     }
+//     return mirrorArray; 
+// }
+// System.Console.WriteLine("Input size of rray: ");
+// int size = Convert.ToInt32(Console.ReadLine());
 
-int[] myArray = CreateRandomArray(size);
-PrintArray(myArray);
-
-
-// int[] myArray2 = ChengeArray(size);
-// PrintArray(myArray2);
-
-
-
-// myArray = ChengeArray(myArray);
+// int[] myArray = CreateRandomArray(size);
 // PrintArray(myArray);
 
-PrintArray(ChengeArray(myArray));
+
+// // int[] myArray2 = ChengeArray(size);
+// // PrintArray(myArray2);
+
+
+
+// // myArray = ChengeArray(myArray);
+// // PrintArray(myArray);
+
+// PrintArray(ChengeArray(myArray));

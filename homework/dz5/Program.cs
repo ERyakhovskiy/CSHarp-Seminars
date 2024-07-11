@@ -2,62 +2,62 @@
 
 //Тело класса будет написано студентом. Класс обязан иметь статический метод PrintResult()
 class UserInputToCompileForTest
-{ 
-// Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+{
+    // Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
 
-// Поиск элемента по позициям
+    // Поиск элемента по позициям
     public static int FindElementByPosition(int[,] array, int x, int y)
     {
         //Напишите свое решение здесь
-      
-      for(int i = 0; i < array.GetLength(0); i++)
-      {
-        
-        for(int j = 0; j < array.GetLength(1); j++) 
+
+        for (int i = 0; i < array.GetLength(0); i++)
         {
-            if(x == i && y == j)
-            {
-                array = array[x,j];
-                
-            }
-        }
         
-      }
-      return array;
-  
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                if (i == x && j == y)
+                {
+                    
+
+                }
+            }
+
+        }
+        return numbers;
+
     }
 
-// Проверка позиций на вхождение в массив
+    // Проверка позиций на вхождение в массив
     public static bool ValidatePosition(int[,] array, int x, int y)
     {
         //Напишите свое решение здесь
-      
-      if(x <= array.GetLength(0) && y <= array.GetLength(1))
-      {
-        return true;
-      }
-      return false;
+
+        if (x <= array.GetLength(0) && y <= array.GetLength(1))
+        {
+            return true;
+        }
+        return false;
     }
 
     public static void PrintResult(int[,] numbers, int x, int y)
     {
         //Напишите свое решение здесь
-       
-      if(ValidatePosition(numbers, x ,y))
-      {
-         Console.WriteLine (numbers[i,j]);
-      }
-      if(x > numbers.GetLenth(0))
-      {
-          Console.WriteLine ("Позиция по рядам выходит за пределы массива");
-      }
-      if(x > numbers.GetLenth(1))
-      {
-          Console.WriteLine ("Позиция по колонкам выходит за пределы массива");
-      }
-        
-        
-      
+
+        if (ValidatePosition(numbers, x, y))
+        {
+            Console.WriteLine(ValidatePosition(numbers));
+        }
+        if (x > numbers.GetLenth(0))
+        {
+            Console.WriteLine("Позиция по рядам выходит за пределы массива");
+        }
+        if (x > numbers.GetLenth(1))
+        {
+            Console.WriteLine("Позиция по колонкам выходит за пределы массива");
+        }
+
+
+
     }
 }
 
@@ -65,7 +65,7 @@ class UserInputToCompileForTest
 class Answer
 {
     public static void Main(string[] args)
-    {   
+    {
         int[,] array;
 
         int x, y;
@@ -111,7 +111,7 @@ class Answer
         }
         else
         {
-           
+
             // Если аргументов на входе нет, используем примерный массив
             array = new int[,]
             {
@@ -121,9 +121,9 @@ class Answer
             };
             x = 2;
             y = 2;
-            
+
             UserInputToCompileForTest.PrintResult(array, x, y);
 
-        }                
+        }
     }
 }
