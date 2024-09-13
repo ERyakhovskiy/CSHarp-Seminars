@@ -14,19 +14,19 @@
 
 //Решение:
 
-// Console.WriteLine("Input first number: ");
-// int x = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input second number: ");
-// int y = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input first number: ");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input second number: ");
+int y = Convert.ToInt32(Console.ReadLine());
 
-// if(x == y * y)
-// {
-//     Console.WriteLine($"x = {x}, y = {y} -> yes");
-// }
-// else
-// {
-//       Console.WriteLine($"x = {x}, y = {y} -> no");
-// }
+if(x == y * y)
+{
+    Console.WriteLine($"x = {x}, y = {y} -> yes");
+}
+else
+{
+      Console.WriteLine($"x = {x}, y = {y} -> no");
+}
 
 
 // Задание №2
@@ -39,14 +39,14 @@
 
 // РЕШЕНИЕ:
 
-// Console.WriteLine("Input N: ");
-// int n = Convert.ToInt32(Console.ReadLine());
-// int start = -n;
-// while(start <= n)
-// {
-//     System.Console.Write(start + " ");
-//     start++;// start = start + 1;
-// }
+Console.WriteLine("Input N: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int start = -n;
+while(start <= n)
+{
+    System.Console.Write(start + " ");
+    start++;// start = start + 1;
+}
 
 // Задание №3
 // Напишите программу, которая принимает на вход
